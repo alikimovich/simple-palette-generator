@@ -1,0 +1,8 @@
+/node_modules/
+/public/build/
+public/index.html
+src/build
+src/code.js
+src/plugin/misc.js
+src/plugin/palette.js
+.DS_Store
