@@ -1,37 +1,11 @@
 export function applyLocalStyles() 
 {
-    const localStyles = figma.getLocalPaintStyles();
-let localStylesArray: any[] = [];
+const localStyles = figma.getLocalPaintStyles();
+let localStylesArray = localStyles.map(({id, name}) => ({id, name}));
 let count = 0;
 const selection = figma.currentPage.selection;
 
 figma.skipInvisibleInstanceChildren = true;
-
-for (const localStyle of localStyles) {
-  if ("color" in localStyle.paints[0]) {
-    if (localStyle.name.includes(' Light')) {
-      const altName = localStyle.name.replace(' Light', '');
-      const localStyleSimplified = {id: localStyle.id, name: altName};
-      localStylesArray.push(localStyleSimplified);
-    } else if (localStyle.name.includes('&')) {
-      const altName = localStyle.name.replace('&', 'and');
-      const localStyleSimplified = {id: localStyle.id, name: altName};
-      localStylesArray.push(localStyleSimplified);
-    } else if (localStyle.name.includes('and')) {
-      let altName = localStyle.name.replace('and', '&');
-      altName = altName.replace('  ',' ');
-      const localStyleSimplified = {id: localStyle.id, name: altName};
-      localStylesArray.push(localStyleSimplified);
-    } else {
-      const altName = localStyle.name + ' Light';
-      const localStyleSimplified = {id: localStyle.id, name: altName};
-      localStylesArray.push(localStyleSimplified);
-    }
-
-    const localStyleSimplified = {id: localStyle.id, name: localStyle.name}
-    localStylesArray.push(localStyleSimplified);
-  }
-}
 
 function addNewNodeToSelection(page: PageNode, node: SceneNode) {
   // .concat() creates a new array

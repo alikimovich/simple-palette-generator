@@ -1,8 +1,11 @@
 /node_modules/
 /public/build/
 public/index.html
+public/code.js
 src/build
 src/code.js
 src/plugin/misc.js
 src/plugin/palette.js
+src/plugin/applylocalstyles.js
+public/manifest.json
 .DS_Store
