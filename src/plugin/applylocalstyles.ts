@@ -35,7 +35,7 @@ async function iterateSelectionAndReplace() {
             'TEXT',
             'VECTOR',
             'GROUP']
-        });;
+        });
         for (const child of childrenNodes) {
           replaceColors(localStylesArray, [child])
         }
