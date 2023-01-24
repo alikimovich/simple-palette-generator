@@ -6,6 +6,10 @@
 2. If there are already styles with certain names, update the colors
 3. Reassign mockup styles from external to local ones
 
+### Check out [the plugin](https://www.figma.com/community/plugin/1188272907622673567) in the Figma community
+
+---
+
 ## Thanks to:
 
 1. [Tom Lowry](https://github.com/thomas-lowry) for [Figsvelte](https://github.com/thomas-lowry/figsvelte)
