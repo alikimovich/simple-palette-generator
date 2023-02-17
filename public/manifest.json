@@ -1,5 +1,6 @@
 {
   "name": "Simple Palette Generator",
+  "id": "1188272907622673567",
   "api": "1.0.0",
   "main": "code.js",
   "editorType": ["figma"],

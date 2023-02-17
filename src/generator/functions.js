@@ -98,7 +98,9 @@ export function generatePalette(primary, secondary, surface, themeMode) {
   let colorsArray = [];
   for (const i in colorCodes) {
     const textColor =
-      chroma(colorCodes[i]).luminance() < 0.19 ? "#fafafa" : "#0a0a0a";
+      chroma(colorCodes[i]).luminance() < 0.19
+        ? "#fafafa"
+        : chroma(colorCodes[i]).set("oklch.l", "0.16");
 
     let contrast = chroma.contrast(colorCodes[i], textColor);
     let contrastAA = contrast < 4.5 ? "❌" : "✅";
